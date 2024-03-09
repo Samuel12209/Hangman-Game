@@ -1,8 +1,26 @@
+import random
+import os
+import time
+players = int(input("How many players are there? (2 minimum players): "))
+
+for i in range(players):
+  names = input("Player name: ")
+  f = open('Players.txt', "a")
+  f.write(names + "\n")
+  f.close()
+  print("Saved name")
+  print("-"*10)
+
+f = open('Players.txt', "r")
+print(f.read())
+time.sleep(2)
+
 def hangman():
-    word = input("Word For others to guess: ").lower()
+    word = ["dichlorodiphenyltrichloroethane","chlorobenzylidenemalononitrile","methylenedioxymethamphetamine","antiestablishmentarianism , antiestablishmentarianism","pneumonoultramicroscopicsilicovolcan" ,"supercalifragilisticexpialidocious", "pseudopseudohypoparathyroidism", "floccinaucinihilipilification","antidisestablishmentarianism", "honorificabilitudinitatibus", "thyroparathyroidectomized", "dichlorodifluoromethane","thyroparathyroidectomy","uvulopalatopharyngoplasty","hyperbetalipoproteinemia"," laryngotracheobronchitis"]
+    word = random.choice(word)
     print(" "*2000)
     guessed = ['_'] * len(word)
-    attempts = 8
+    attempts = 10
 
     while True:
         print(" ".join(guessed))

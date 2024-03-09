@@ -1,3 +1,3 @@
 # Hangman-Game
 Hangman game
-just execute it in your ide enviornment
+just execute it in your ide enviornment.
